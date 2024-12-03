@@ -1,0 +1,293 @@
+/* General Style Enhancements */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: red;
+}
+
+
+/* Smooth scrolling effect */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Header */
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-family: 'Georgia', serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e6b800;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* About Section */
+
+.about {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+/* Rooms Section */
+
+.rooms {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+.room {
+    width: 45%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.5s forwards 0.5s;
+}
+
+.room img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.room img:hover {
+    transform: scale(1.05);
+}
+
+.room h3 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.room p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Card hover effect */
+
+.room:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Fade-in Animation */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Booking Form Animation */
+
+.booking {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease;
+}
+
+.booking.show-form {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.booking form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.booking input,
+.booking select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.booking input:focus,
+.booking select:focus {
+    border-color: #ffcc00;
+}
+
+.booking button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.booking button:hover {
+    background-color: #e6b800;
+    transform: translateY(-5px);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Section transition */
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: sectionFadeIn 1s forwards;
+}
+
+@keyframes sectionFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
